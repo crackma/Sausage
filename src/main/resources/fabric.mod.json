@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "sausage",
+  "version": "${version}",
+  "name": "Sausage",
+  "description": "",
+  "authors": [],
+  "contact": {
+    "repo": "https://github.com/frandma/Sausage"
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "assets/Sausage/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "me.frandma.sausage.client.SausageClient"
+    ],
+    "main": [
+      "me.frandma.sausage.Sausage"
+    ]
+  },
+  "mixins": [
+    "Sausage.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.14",
+    "fabric": "*",
+    "minecraft": "1.19.3"
+  }
+}
