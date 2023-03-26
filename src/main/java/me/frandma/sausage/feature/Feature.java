@@ -1,16 +1,18 @@
 package me.frandma.sausage.feature;
 
+import net.minecraft.client.MinecraftClient;
+
 public abstract class Feature {
+
+    protected MinecraftClient mc = MinecraftClient.getInstance();
 
     protected String name;
 
     protected int keyBinding;
 
-    private boolean toggled;
+    protected boolean toggled;
 
-    public Feature() {
-        this.toggled = false;
-    }
+    public Feature() { }
 
     public String getName() {
         return name;
@@ -24,19 +26,17 @@ public abstract class Feature {
         return toggled;
     }
 
-    public void enable() {
+    public void enable() { }
 
-    }
-
-    public void disable() {
-
-    }
+    public void disable() { }
 
     public final void toggle() {
         if (toggled){
-            enable();
-        } else {
             disable();
+            toggled = false;
+        } else {
+            enable();
+            toggled = true;
         }
     }
 }

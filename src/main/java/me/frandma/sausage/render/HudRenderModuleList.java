@@ -12,11 +12,11 @@ public class HudRenderModuleList implements HudRenderCallback {
 
     @Override
     public void onHudRender(MatrixStack matrixStack, float tickDelta) {
-        DrawableHelper.drawTextWithShadow(matrixStack, MinecraftClient.getInstance().textRenderer, Text.of("Modules:"), 0, 0, 0xffffff);
+        DrawableHelper.drawTextWithShadow(matrixStack, MinecraftClient.getInstance().textRenderer, Text.of("Features:"), 0, 0, 0xffffff);
         int y = 9;
-        for (Feature module : FeatureManager.getModules()) {
-            if (!module.isToggled()) continue;
-            DrawableHelper.drawTextWithShadow(matrixStack, MinecraftClient.getInstance().textRenderer, Text.of("- §a" + module.getName()), 0, y, 0xffffff);
+        for (Feature feature : FeatureManager.getFeatures()) {
+            if (!feature.isToggled()) continue;
+            DrawableHelper.drawTextWithShadow(matrixStack, MinecraftClient.getInstance().textRenderer, Text.of("- §a" + feature.getName()), 0, y, 0xffffff);
             y = y + 9;
         }
     }
