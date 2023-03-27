@@ -10,9 +10,14 @@ import net.minecraft.text.Text;
 
 public class HudRenderModuleList implements HudRenderCallback {
 
+    private MinecraftClient mc = MinecraftClient.getInstance();
+
     @Override
     public void onHudRender(MatrixStack matrixStack, float tickDelta) {
-        DrawableHelper.drawTextWithShadow(matrixStack, MinecraftClient.getInstance().textRenderer, Text.of("Features:"), 0, 0, 0xffffff);
+        if (MinecraftClient.getInstance().options.debugEnabled) return;
+        DrawableHelper.drawTextWithShadow(matrixStack, mc.textRenderer,
+                Text.of("SausageMod; FD:" + mc.player.fallDistance + "."),
+                0, 0, 0xffffff);
         int y = 9;
         for (Feature feature : FeatureManager.getFeatures()) {
             if (!feature.isToggled()) continue;

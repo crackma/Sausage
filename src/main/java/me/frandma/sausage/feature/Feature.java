@@ -1,6 +1,8 @@
 package me.frandma.sausage.feature;
 
+import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.util.math.Vec3d;
 
 public abstract class Feature {
 
@@ -12,7 +14,11 @@ public abstract class Feature {
 
     protected boolean toggled;
 
-    public Feature() { }
+    public Feature() {
+        ClientTickEvents.START_CLIENT_TICK.register(client -> {
+            tick();
+        });
+    }
 
     public String getName() {
         return name;
@@ -25,6 +31,8 @@ public abstract class Feature {
     public boolean isToggled() {
         return toggled;
     }
+
+    protected void tick() { }
 
     public void enable() { }
 
