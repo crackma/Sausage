@@ -8,7 +8,7 @@ import net.minecraft.client.gui.DrawableHelper;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.text.Text;
 
-public class HudRenderModuleList implements HudRenderCallback {
+public class HudRender implements HudRenderCallback {
 
     private MinecraftClient mc = MinecraftClient.getInstance();
 
@@ -16,7 +16,7 @@ public class HudRenderModuleList implements HudRenderCallback {
     public void onHudRender(MatrixStack matrixStack, float tickDelta) {
         if (MinecraftClient.getInstance().options.debugEnabled) return;
         DrawableHelper.drawTextWithShadow(matrixStack, mc.textRenderer,
-                Text.of("SausageMod; FD:" + mc.player.fallDistance + "."),
+                Text.of("SausageMod"),
                 0, 0, 0xffffff);
         int y = 9;
         for (Feature feature : FeatureManager.getFeatures()) {

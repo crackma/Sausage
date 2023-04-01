@@ -10,10 +10,10 @@ public class KeyBindManager {
 
     public static void initFeature(Feature feature) {
         KeyBinding keyBinding = KeyBindingHelper.registerKeyBinding(new KeyBinding(
-                "key.sausage.toggle_" + feature.getName(),
+                feature.getName(),
                 InputUtil.Type.KEYSYM,
                 feature.getKeyBinding(),
-                "key.category.sausage.Features"
+                "Features"
         ));
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if (!keyBinding.wasPressed()) return;

@@ -15,6 +15,8 @@ public class FlyFeature extends Feature {
     protected void tick() {
         if (!this.isToggled()) return;
 
+
+
         //check if it should give extra speed for up and down if you are sprinting
         int speed = 1;
         if (mc.options.sprintKey.isPressed()) speed++;
@@ -29,19 +31,21 @@ public class FlyFeature extends Feature {
         mc.player.setVelocity(vec3d);
     }
 
+    //it does something
     private double sin(int yawOffset) {
-        int extraSpeed = 1;
-        if (mc.options.sprintKey.isPressed()) extraSpeed++;
+        int speed = 1;
+        if (mc.options.sprintKey.isPressed()) speed++;
 
         double radians = -Math.toRadians(mc.player.getYaw() + yawOffset);
-        return Math.sin(radians) * extraSpeed;
+        return Math.sin(radians) * speed;
     }
 
+    //this is required
     private double cos(int yawOffset) {
-        int extraSpeed = 1;
-        if (mc.options.sprintKey.isPressed()) extraSpeed++;
+        int speed = 1;
+        if (mc.options.sprintKey.isPressed()) speed++;
 
         double radians = Math.toRadians(mc.player.getYaw() + yawOffset);
-        return Math.cos(radians) * extraSpeed;
+        return Math.cos(radians) * speed;
     }
 }

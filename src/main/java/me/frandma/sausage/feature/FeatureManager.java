@@ -12,7 +12,7 @@ public class FeatureManager {
 
     private static List<Feature> features = new ArrayList<>();
 
-    public static void init() {
+    public static void initFeatures() {
         initFeature(new FlyFeature());
 
         initFeature(new NofallFeature());
@@ -28,6 +28,7 @@ public class FeatureManager {
         features.add(feature);
         KeyBindManager.initFeature(feature);
     }
+
 
     public static List<Feature> getFeatures() {
         return features;
