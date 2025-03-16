@@ -1,9 +1,20 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "me.frandma.sausage.mixin",
-  "compatibilityLevel": "JAVA_17",
+  "package": "me.frandma.sausage.mixins",
+  "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "CameraMixin",
+    "DrawContextAccessor",
+    "GameOptionsMixin",
+    "GameRendererMixin",
+    "KeyboardMixin",
+    "MinecraftClientAccessor",
+    "MinecraftClientInvoker",
+    "MouseMixin",
+    "PlayerInventoryMixin",
+    "TessellatorAccessor",
+    "TextureManagerMixin"
   ],
   "client": [
   ],

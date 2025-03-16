@@ -1,49 +1,34 @@
 package me.frandma.sausage.feature;
 
-import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
+import lombok.Getter;
 import net.minecraft.client.MinecraftClient;
 
 public abstract class Feature {
-
-    protected MinecraftClient mc = MinecraftClient.getInstance();
-
-    protected String name;
-
-    protected int keyBinding;
-
-    protected boolean toggled;
-
-    public Feature() {
-        ClientTickEvents.START_CLIENT_TICK.register(client -> {
-            tick();
-        });
+  @Getter
+  protected Settings settings = new Settings();
+  protected MinecraftClient mc = MinecraftClient.getInstance();
+  @Getter
+  protected String name;
+  @Getter
+  protected int defaultKeyBinding;
+  @Getter
+  protected boolean toggled;
+  //TODO toggle on bind release
+  @Getter
+  protected boolean onlyWhenHeldDown;
+  public Feature() { }
+  protected void tick() { }
+  public final void enable() {
+    toggled = true;
+  }
+  public final void disable() {
+    toggled = false;
+  }
+  public final void toggle() {
+    if (toggled){
+      disable();
+    } else {
+      enable();
     }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getKeyBinding() {
-        return keyBinding;
-    }
-
-    public boolean isToggled() {
-        return toggled;
-    }
-
-    protected void tick() { }
-
-    public void enable() { }
-
-    public void disable() { }
-
-    public final void toggle() {
-        if (toggled){
-            disable();
-            toggled = false;
-        } else {
-            enable();
-            toggled = true;
-        }
-    }
+  }
 }
