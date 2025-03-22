@@ -1,6 +1,6 @@
-package me.frandma.sausage.utils;
+package me.frandma.sausage.util;
 
-import me.frandma.sausage.mixins.MinecraftClientInvoker;
+import me.frandma.sausage.mixin.MinecraftClientInvoker;
 import net.minecraft.client.MinecraftClient;
 
 public class Utils {

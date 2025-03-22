@@ -1,11 +1,7 @@
-package me.frandma.sausage.mixins;
+package me.frandma.sausage.mixin;
 
-import me.frandma.sausage.Sausage;
-import me.frandma.sausage.client.SausageClient;
 import me.frandma.sausage.event.EventManager;
 import me.frandma.sausage.event.events.PerspectiveChangeEvent;
-import me.frandma.sausage.feature.FeatureManager;
-import me.frandma.sausage.feature.features.CameraClipFeature;
 import net.minecraft.client.option.GameOptions;
 import net.minecraft.client.option.Perspective;
 import org.spongepowered.asm.mixin.Mixin;

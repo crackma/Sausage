@@ -1,5 +1,6 @@
 package me.frandma.sausage.feature.features;
 
+import me.frandma.sausage.feature.Category;
 import me.frandma.sausage.feature.Feature;
 import me.frandma.sausage.feature.setting.ModeSetting;
 import me.frandma.sausage.feature.setting.Setting;
@@ -11,11 +12,12 @@ import net.minecraft.world.RaycastContext;
 import org.lwjgl.glfw.GLFW;
 
 public class GhostBlockFeature extends Feature {
-  private Setting<Double> maxDistance = settings.addSetting(new SliderSetting(this, "max distance", 5D, 1D, 10D, 1));
-  private Setting<Mode> mode = settings.addSetting(new ModeSetting(this, "mode", Mode.ONCE));
+  private final Setting<Double> maxDistance = settings.addSetting(new SliderSetting(this, "max distance", 5D, 1D, 10D, 1));
+  private final Setting<Mode> mode = settings.addSetting(new ModeSetting(this, "mode", Mode.ONCE));
   public GhostBlockFeature() {
     this.toggled = false;
-    super.name = "GhostBlock";
+    super.name = "ghost block";
+    super.category = Category.WORLD;
     super.defaultKeyBinding = GLFW.GLFW_KEY_C;
     super.onlyWhenHeldDown = true;
   }

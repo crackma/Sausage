@@ -1,6 +1,5 @@
-package me.frandma.sausage.mixins;
+package me.frandma.sausage.mixin;
 
-import net.minecraft.client.texture.AbstractTexture;
 import net.minecraft.client.texture.ReloadableTexture;
 import net.minecraft.client.texture.TextureManager;
 import net.minecraft.util.Identifier;

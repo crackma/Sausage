@@ -4,11 +4,7 @@ import lombok.Getter;
 import net.minecraft.util.Identifier;
 
 public enum SausageFont {
-  TAHOMA( "tahoma"),
-  VOLTE_REGULAR( "volte-regular"),
-  VOLTE_MEDIUM("volte-medium"),
-  VOLTE_SEMIBOLD("volte-semibold"),
-  VOLTE_BOLD( "volte-bold");
+  TAHOMA("tahoma");
   @Getter
   private final Identifier identifier;
   SausageFont(String path) {

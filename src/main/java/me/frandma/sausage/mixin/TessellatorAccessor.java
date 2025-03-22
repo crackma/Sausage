@@ -1,6 +1,5 @@
-package me.frandma.sausage.mixins;
+package me.frandma.sausage.mixin;
 
-import net.minecraft.client.font.FontManager;
 import net.minecraft.client.render.Tessellator;
 import net.minecraft.client.util.BufferAllocator;
 import org.spongepowered.asm.mixin.Mixin;

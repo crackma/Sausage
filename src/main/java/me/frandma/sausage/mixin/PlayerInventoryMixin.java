@@ -1,10 +1,7 @@
-package me.frandma.sausage.mixins;
+package me.frandma.sausage.mixin;
 
-import me.frandma.sausage.Sausage;
 import me.frandma.sausage.event.EventManager;
 import me.frandma.sausage.event.events.ChangeInventorySlotEvent;
-import me.frandma.sausage.feature.features.CameraClipFeature;
-import me.frandma.sausage.feature.features.ScrollClickFeature;
 import net.minecraft.entity.player.PlayerInventory;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

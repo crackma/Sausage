@@ -1,11 +1,7 @@
-package me.frandma.sausage.mixins;
+package me.frandma.sausage.mixin;
 
-import me.frandma.sausage.Sausage;
-import me.frandma.sausage.client.SausageClient;
 import me.frandma.sausage.event.EventManager;
 import me.frandma.sausage.event.events.ClipToSpaceEvent;
-import me.frandma.sausage.feature.FeatureManager;
-import me.frandma.sausage.feature.features.CameraClipFeature;
 import net.minecraft.client.render.Camera;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

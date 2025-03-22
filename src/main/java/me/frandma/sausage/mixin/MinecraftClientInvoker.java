@@ -1,4 +1,4 @@
-package me.frandma.sausage.mixins;
+package me.frandma.sausage.mixin;
 
 import net.minecraft.client.MinecraftClient;
 import org.spongepowered.asm.mixin.Mixin;

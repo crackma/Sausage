@@ -1,12 +1,17 @@
 package me.frandma.sausage.feature;
 
+import lombok.Getter;
+
 public enum Category {
-  COMBAT("Combat"),
-  MOVEMENT("Movement"),
-  RENDER("Render"),
-  WORLD("World"),
-  HUD("HUD"),
-  MISC("Misc");
+  COMBAT("combat"),
+  MOVEMENT("movement"),
+  RENDER("render"),
+  WORLD("world"),
+  HUD("hud"),
+  PLAYER  ("player"),
+  ALTS("alts"),
+  CONFIG("config");
+  @Getter
   private final String name;
   Category(String name) {
     this.name = name;

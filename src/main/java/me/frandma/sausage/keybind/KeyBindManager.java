@@ -1,4 +1,4 @@
-package me.frandma.sausage.keybinds;
+package me.frandma.sausage.keybind;
 
 import me.frandma.sausage.feature.Feature;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
@@ -17,19 +17,19 @@ public class KeyBindManager {
         "Features"
     ));
     if (feature.isOnlyWhenHeldDown()) {
-      try {
-        Field pressedField = KeyBinding.class.getDeclaredField("pressed");
-        pressedField.setAccessible(true);
-        Field toggledField = Feature.class.getDeclaredField("toggled");
-        toggledField.setAccessible(true);
-          try {
-            toggledField.setBoolean(feature, pressedField.getBoolean(keyBinding));
-          } catch (IllegalAccessException e) {
-            e.printStackTrace();
-          }
-      } catch (NoSuchFieldException e) {
-        e.printStackTrace();
-      }
+//      try {
+//        Field pressedField = KeyBinding.class.getDeclaredField("pressed");
+//        pressedField.setAccessible(true);
+//        Field toggledField = Feature.class.getDeclaredField("toggled");
+//        toggledField.setAccessible(true);
+//          try {
+//            toggledField.setBoolean(feature, pressedField.getBoolean(keyBinding));
+//          } catch (IllegalAccessException e) {
+//            e.printStackTrace();
+//          }
+//      } catch (NoSuchFieldException e) {
+//        e.printStackTrace();
+//      }
       return;
     }
     ClientTickEvents.END_CLIENT_TICK.register(client -> {

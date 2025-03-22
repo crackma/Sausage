@@ -1,11 +1,9 @@
-package me.frandma.sausage.mixins;
+package me.frandma.sausage.mixin;
 
 import com.llamalad7.mixinextras.sugar.Local;
-import me.frandma.sausage.Sausage;
 import me.frandma.sausage.event.EventManager;
 import me.frandma.sausage.event.events.RenderHudEvent;
 import me.frandma.sausage.event.events.RenderEvent;
-import me.frandma.sausage.render.ClickGUI;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.render.GameRenderer;
 import net.minecraft.client.render.RenderTickCounter;

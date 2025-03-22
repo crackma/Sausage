@@ -1,4 +1,4 @@
-package me.frandma.sausage.mixins;
+package me.frandma.sausage.mixin;
 
 import me.frandma.sausage.event.EventManager;
 import me.frandma.sausage.event.events.KeyboardKeyEvent;

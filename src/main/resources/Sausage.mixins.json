@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "me.frandma.sausage.mixins",
+  "package": "me.frandma.sausage.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "CameraMixin",

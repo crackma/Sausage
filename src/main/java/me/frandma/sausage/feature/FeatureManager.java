@@ -6,7 +6,7 @@ import me.frandma.sausage.feature.features.NoFallFeature;
 import me.frandma.sausage.feature.features.ScrollClickFeature;
 import me.frandma.sausage.feature.features.CameraClipFeature;
 import me.frandma.sausage.feature.features.GhostBlockFeature;
-import me.frandma.sausage.keybinds.KeyBindManager;
+import me.frandma.sausage.keybind.KeyBindManager;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.minecraft.client.MinecraftClient;
 

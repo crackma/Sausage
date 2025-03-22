@@ -16,7 +16,6 @@ public class Sausage implements ModInitializer {
     @Override
     public void onInitialize() {
         instance = this;
-        MinecraftClient mc = MinecraftClient.getInstance();
         featureManager = new FeatureManager();
         clickGUI = new ClickGUI(this);
         new HudRender(this);

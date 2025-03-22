@@ -1,10 +1,12 @@
 package me.frandma.sausage.feature.features;
 
+import me.frandma.sausage.feature.Category;
 import me.frandma.sausage.feature.Feature;
 import me.frandma.sausage.feature.Settings;
 import me.frandma.sausage.feature.setting.ModeSetting;
 import me.frandma.sausage.feature.setting.Setting;
 import me.frandma.sausage.feature.setting.SliderSetting;
+import me.frandma.sausage.feature.setting.ToggleSetting;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -19,12 +21,13 @@ import net.minecraft.world.RaycastContext;
 import org.lwjgl.glfw.GLFW;
 
 public class FlyFeature extends Feature {
-  private Setting<Mode> flyMode = settings.addSetting(new ModeSetting(this, "mode", Mode.NORMAL));
-  private Setting<Double> speed = settings.addSetting(new SliderSetting(this, "speed", 1D, 1D, 10D, 0.5));
-  private Setting<Double> sprintSpeed = settings.addSetting(new SliderSetting(this, "sprint speed", 2D, 1D, 10D, 0.5));
+  private final Setting<Mode> flyMode = settings.addSetting(new ModeSetting(this, "modeg", Mode.NORMAL));
+  private final Setting<Double> speed = settings.addSetting(new SliderSetting(this, "speed", 1D, 0.5D, 10D, 0.5));
+  private final Setting<Double> sprintSpeed = settings.addSetting(new SliderSetting(this, "sprint speed", 2D, 0.5D, 10D, 0.5));
   public FlyFeature() {
     this.toggled = false;
-    super.name = "Fly";
+    super.name = "fly";
+    super.category = Category.MOVEMENT;
     super.defaultKeyBinding = GLFW.GLFW_KEY_Z;
   }
   protected void tick() {
@@ -64,7 +67,6 @@ public class FlyFeature extends Feature {
         double xVelocity = (-sinYaw * forward + cosYaw * -strafe) * cosPitch * speed;
         double yVelocity = -sinPitch * forward * speed; // Adjust for vertical movement
         double zVelocity = (cosYaw * forward + sinYaw * -strafe) * cosPitch * speed;
-
         vec3d.add(xVelocity, yVelocity, zVelocity);
         break;
     }

@@ -1,11 +1,10 @@
 package me.frandma.sausage.feature.setting;
 
+import lombok.Getter;
 import me.frandma.sausage.feature.Feature;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.gui.DrawContext;
 
+@Getter
 public abstract class Setting<T> {
-  public final MinecraftClient mc = MinecraftClient.getInstance();
   private final String name;
   private final T defaultValue;
   private T value;
@@ -16,19 +15,13 @@ public abstract class Setting<T> {
     this.value = defaultValue;
     this.feature = feature;
   }
-  public String getName() {
-    return name;
-  }
-  public T getDefaultValue() {
-    return defaultValue;
-  }
-  public T getValue() {
-    return value;
-  }
+  public abstract Type getType();
   public void set(T value) {
     this.value = value;
   }
-  public abstract int onRender(DrawContext drawContext, final int x, final int y);
-  public abstract void onClick(double mouseX, double mouseY, int button, int action);
-  public abstract void onKey(int key, int action);
+  public enum Type {
+    MODE,
+    SLIDER,
+    TOGGLE
+  }
 }

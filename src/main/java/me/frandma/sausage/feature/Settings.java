@@ -1,6 +1,5 @@
 package me.frandma.sausage.feature;
 
-import lombok.Getter;
 import me.frandma.sausage.feature.setting.Setting;
 
 import java.util.ArrayList;
