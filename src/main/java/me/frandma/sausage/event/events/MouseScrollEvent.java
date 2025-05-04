@@ -6,8 +6,8 @@ import me.frandma.sausage.event.Event;
 
 @Getter
 public class MouseScrollEvent extends Cancellable implements Event {
-  private long window;
-  private double horizontal, vertical;
+  private final long window;
+  private final double horizontal, vertical;
   public MouseScrollEvent(long window, double horizontal, double vertical) {
     this.window = window;
     this.horizontal = horizontal;

@@ -7,7 +7,7 @@ import net.minecraft.client.option.Perspective;
 
 public class PerspectiveChangeEvent extends Cancellable implements Event {
   @Getter
-  private Perspective perspective;
+  private final Perspective perspective;
   public PerspectiveChangeEvent(Perspective perspective) {
     this.perspective = perspective;
   }

@@ -22,8 +22,7 @@ public class MouseMixin {
   private void onCursorPos(long window, double x, double y, CallbackInfo info) {
     this.x = (int) x;
     this.y = (int) y;
-    MouseCursorPosEvent mouseCursorPosEvent = new MouseCursorPosEvent(window, this.x, this.y);
-    if (EventManager.trigger(mouseCursorPosEvent)) info.cancel();
+    if (EventManager.trigger(new MouseCursorPosEvent(window, this.x, this.y))) info.cancel();
   }
   @Inject(method = "onMouseButton", at = @At("HEAD"), cancellable = true)
   private void onMouseButton(long window, int button, int action, int mods, CallbackInfo info) {

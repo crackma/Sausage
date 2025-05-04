@@ -1,7 +1,5 @@
 package me.frandma.sausage.feature;
 
-import me.frandma.sausage.feature.setting.Setting;
-
 import java.util.ArrayList;
 import java.util.List;
 

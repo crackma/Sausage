@@ -10,12 +10,12 @@ import java.lang.reflect.Field;
 
 public class KeyBindManager {
   public static void initFeature(Feature feature) {
-    KeyBinding keyBinding = KeyBindingHelper.registerKeyBinding(new KeyBinding(
-        feature.getName(),
-        InputUtil.Type.KEYSYM,
-        feature.getDefaultKeyBinding(),
-        "Features"
-    ));
+//    KeyBinding keyBinding = KeyBindingHelper.registerKeyBinding(new KeyBinding(
+//        feature.getName(),
+//        InputUtil.Type.KEYSYM,
+//        feature.getDefaultKeyBinding(),
+//        "Features"
+//    ));
     if (feature.isOnlyWhenHeldDown()) {
 //      try {
 //        Field pressedField = KeyBinding.class.getDeclaredField("pressed");
@@ -32,8 +32,8 @@ public class KeyBindManager {
 //      }
       return;
     }
-    ClientTickEvents.END_CLIENT_TICK.register(client -> {
-      if (keyBinding.wasPressed()) feature.toggle();
-    });
+//    ClientTickEvents.END_CLIENT_TICK.register(client -> {
+//      if (keyBinding.wasPressed()) feature.toggle();
+//    });
   }
 }

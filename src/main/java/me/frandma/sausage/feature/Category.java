@@ -4,11 +4,11 @@ import lombok.Getter;
 
 public enum Category {
   COMBAT("combat"),
+  HUD("hud"),
+  MISC ("misc"),
   MOVEMENT("movement"),
   RENDER("render"),
   WORLD("world"),
-  HUD("hud"),
-  PLAYER  ("player"),
   ALTS("alts"),
   CONFIG("config");
   @Getter

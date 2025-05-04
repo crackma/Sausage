@@ -6,7 +6,7 @@ import net.minecraft.client.gui.DrawContext;
 
 public class RenderEvent implements Event {
   @Getter
-  private DrawContext drawContext;
+  private final DrawContext drawContext;
   public RenderEvent(DrawContext drawContext) {
     this.drawContext = drawContext;
   }

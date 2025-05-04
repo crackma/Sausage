@@ -1,0 +1,7 @@
+accessWidener v2 named
+accessible field net/minecraft/network/packet/c2s/play/PlayerMoveC2SPacket x D
+accessible field net/minecraft/network/packet/c2s/play/PlayerMoveC2SPacket y D
+accessible field net/minecraft/network/packet/c2s/play/PlayerMoveC2SPacket z D
+accessible field net/minecraft/network/packet/c2s/play/PlayerMoveC2SPacket pitch F
+accessible field net/minecraft/network/packet/c2s/play/PlayerMoveC2SPacket yaw F
+accessible class net/minecraft/client/texture/PlayerSkinProvider$FileCache
